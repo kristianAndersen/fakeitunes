@@ -1,0 +1,27 @@
+*,
+*:after,
+*:before{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+}
+h2{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+p{
+    font-size: 1.5rem;
+}
+.col-6{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}

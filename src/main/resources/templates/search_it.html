@@ -1,0 +1,33 @@
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" th:href="@{/css/main.css}">
+
+<head>
+
+</head>
+<body>
+<div class="container-fluid bg-primary">
+    <h2>5 random Artists</h2>
+    <div class="row" th:each="info: ${searcInfo}">
+        <div class="col-6">
+            <p th:text="${info}"></p>
+        </div>
+    </div>
+</div>
+
+
+<!--
+<span th:text="${mapEntry.key}"></span>
+        <span th:text="${mapEntry.value}"></span>
+
+gnamre = []
+aname = []
+cname = []
+tname = []
+alname = []
+-->
+
+</body>
+
+
+

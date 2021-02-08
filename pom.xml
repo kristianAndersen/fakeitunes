@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.kristian</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>fakeitunes</artifactId>
     <version>0.0.1</version>
-    <country>fake itunes</country>
+    <name>fakeitunes</name>
     <description>Spring Boot fake itunes</description>
     <properties>
         <java.version>15</java.version>

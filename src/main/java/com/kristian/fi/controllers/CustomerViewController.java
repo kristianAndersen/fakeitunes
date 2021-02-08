@@ -20,17 +20,10 @@ public class CustomerViewController {
         return "index";
     }
 
-    @RequestMapping(value = "/search", method = RequestMethod.GET)
+    @RequestMapping(value = "/search_it", method = RequestMethod.GET)
     public String getCustomerSongSearch(Model model,@RequestParam(value="searchForThis") String search){
-        System.out.println("THIS IS Search STRING "+search);
         model.addAttribute("result", custSearcsong.getCustomerSearch(search));
-        return "search";
-    }
-
-
-    @RequestMapping("/")
-    public void handleRequest() {
-        throw new RuntimeException("test exception");
+        return "search_it";
     }
 
 

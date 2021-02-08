@@ -27,7 +27,7 @@ Project scope:
     - 5. Show highest spending customer
     - 6. Show a given customers favorit genre
 
-  **REST API** can be tested [in Postman](https://www.postman.com/) using the the collection provided [herer][/assets/fakeitunes.postman_collection.json]
+  **REST API** can be tested [in Postman](https://www.postman.com/) using the the collection provided [herer](/assets/fakeitunes.postman_collection.json)
 
 The data in this app is from a SQLite database:
 [Chinook database.](https://github.com/lerocha/chinook-database) wich emulates the Itunes funcutunality.

@@ -35,15 +35,15 @@ public Boolean addNewCustomer(@RequestBody Customer customer){
 
 /**
  * 3. Update existing customer*/
-@RequestMapping(value = "/api/customers/{id}", method = RequestMethod.PUT)
-public Boolean updateExistingCustomer(@PathVariable String id, @RequestBody Customer customer){
+@RequestMapping(value = "/api/customers/customer/{customerId}", method = RequestMethod.PUT)
+public Boolean updateExistingCustomer(@PathVariable String customerId, @RequestBody Customer customer){
     return customerRepository.updateCustomer(customer);
 }
 
 
 /**
  * 4. Return the highest number of customers i each country in descending order*/
-@RequestMapping(value="/api/customers/country", method = RequestMethod.GET)
+@RequestMapping(value="/api/customers/in-country", method = RequestMethod.GET)
 public ArrayList<CustomerInCountry> getCustomersinCountry(){
     return customerRepository.getCustomersinCountry();
 }
@@ -51,7 +51,7 @@ public ArrayList<CustomerInCountry> getCustomersinCountry(){
 
 /**
  * 5 Return big spender customers (total in invoice) descending order*/
-@RequestMapping(value="/api/customers/highspender", method = RequestMethod.GET)
+@RequestMapping(value="/api/customers/highest-spend", method = RequestMethod.GET)
 public ArrayList<CustomerHighSpender> getHighestSpender(){
     return customerRepository.getHighestSpender();
 }
@@ -59,9 +59,9 @@ public ArrayList<CustomerHighSpender> getHighestSpender(){
 
 /**
  * 6. Most popular genre for a customer if tie then both get from tracks/invoice*/
-@RequestMapping(value = "/api/customers/{id}/genre", method = RequestMethod.GET)
-public ArrayList<CustomerGenre> getCustomerGenre(@PathVariable String id){
-    return customerRepository.getCustomerGenre(id);
+@RequestMapping(value = "/api/customers/customer/{customerId}/favorite/genre", method = RequestMethod.GET)
+public ArrayList<CustomerGenre> getCustomerGenre(@PathVariable String customerId){
+    return customerRepository.getCustomerGenre(customerId);
 }
 
 }
